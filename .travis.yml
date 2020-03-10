@@ -6,7 +6,7 @@ before_install:
   - docker build -t AftabVirtual/docker-react -f Dockerfile.dev .
 
   script:
-    - docker run -e CI=true AftabVirtual/docker-react npm run test  
+    - docker run AftabVirtual/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
