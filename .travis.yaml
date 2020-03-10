@@ -5,8 +5,8 @@ services:
 before_install:
   - docker build -t aftabvirtual/docker-react -f Dockerfile.dev .
 
-script:
-  - docker run stephengrider/docker-react npm run test -- --coverage
+  script:
+    - docker run -e CI=true USERNAME/docker-react npm run test  
 
 deploy:
   provider: elasticbeanstalk
