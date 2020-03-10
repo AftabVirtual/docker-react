@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t aftabvirtual/docker-react -f Dockerfile.dev .
+  - docker build -t AftabVirtual/docker-react -f Dockerfile.dev .
 
   script:
     - docker run -e CI=true AftabVirtual/docker-react npm run test  
